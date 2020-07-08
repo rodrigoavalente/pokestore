@@ -1,14 +1,11 @@
 import React, { Component } from 'react';
-import { Menu, Container, Input, Image, Header, Button, Icon, Label, Grid, Dropdown, Modal, Table } from 'semantic-ui-react';
+import { Menu, Container, Input, Image, Header, Button, Icon, Label, Modal, Table } from 'semantic-ui-react';
 import PokeListagem from './PokeListagem';
-import PokeCart from './PokeCart';
 
 type PokeStoreState = {
     query: String,
     itens: Array<Pokemon>
 }
-
-let typingTimeout = null;
 
 export default class PokeRestore extends Component<{}, PokeStoreState> {
 

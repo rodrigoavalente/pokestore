@@ -1,15 +1,16 @@
 import axios from 'axios';
 
 import React, { Component } from 'react';
-import { Grid, Card, Label, Image, Button, ButtonContent, Icon } from 'semantic-ui-react';
+import { Grid, Card, Label, Image, Button, Icon } from 'semantic-ui-react';
+
+export type Pokemon = {
+    name: String,
+    url: String
+}
 
 type PokemonContainerProps = {
     pokemon: Pokemon,
     addCart: Function
-}
-
-type PokemonContainerState = {
-    details: PokemonDetails
 }
 
 type PokemonDetails = {
@@ -23,9 +24,8 @@ type PokemonDetails = {
     ]
 }
 
-export type Pokemon = {
-    name: String,
-    url: String
+type PokemonContainerState = {
+    details: PokemonDetails
 }
 
 export default class PokeContainer extends Component<PokemonContainerProps, PokemonContainerState> {
@@ -78,7 +78,7 @@ export default class PokeContainer extends Component<PokemonContainerProps, Poke
                         </Button>
                         </Grid.Column>
                         <Grid.Column>
-                            <a>
+                            <a href="#">
                                 R$ {this.state.details.weight.toFixed(2)}
                             </a>
                         </Grid.Column>
