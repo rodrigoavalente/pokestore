@@ -77,10 +77,8 @@ export default class PokeContainer extends Component<PokemonContainerProps, Poke
                             </Button.Content>
                         </Button>
                         </Grid.Column>
-                        <Grid.Column>
-                            <a href="#">
-                                R$ {this.state.details.weight.toFixed(2)}
-                            </a>
+                        <Grid.Column>                            
+                            R$ {this.state.details.weight.toFixed(2)}            
                         </Grid.Column>
                     </Grid>                                        
                 </Card.Content>
